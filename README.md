@@ -32,10 +32,14 @@ public class Book {
 
 }
 
-4) Create Rest Repository to expose REST API methods
- 
+
+3 Create Rest Repository to expose REST API methods
+
     @RepositoryRestResource(path = "books")
-    public interface BookRepository extends JpaRepository<Book,    Integer>{
+    public interface BookRepository extends JpaRepository<Book,Integer>{
 
     public List<Book> findByName(@Param("name") String name);
 }
+
+Note: @RepositoryRestResource is a annotation used to make our jpa repository as Rest Repository.
+
